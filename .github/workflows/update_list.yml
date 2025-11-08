@@ -3,7 +3,8 @@ name: Update list
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0,10,20,30,40,50 * * * *' # UTC
+    - cron: '0 * * * *' # UTC
+#    - cron: '0,10,20,30,40,50 * * * *' # UTC
 
 jobs:
   update-rating-data:
@@ -16,7 +17,7 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
       with:
-#        fetch-depth: 0
+        fetch-depth: 0
         ref: update/rating-data
 
     - name: Install uv
