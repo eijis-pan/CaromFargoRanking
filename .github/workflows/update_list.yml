@@ -1,0 +1,64 @@
+name: Update list
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0,10,20,30,40,50 * * * *' # UTC
+
+jobs:
+  update-rating-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+      with:
+#        fetch-depth: 0
+        ref: update/player-data
+
+    - name: Install uv
+      uses: astral-sh/setup-uv@v3
+
+    - name: Install Python Packages
+      run: |
+        uv sync --no-dev --frozen
+
+    - name: Run Update Script
+      env:
+        GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+        GCP_PRIVATE_KEY_ID: ${{ secrets.GCP_PRIVATE_KEY_ID }}
+        GCP_PRIVATE_KEY: ${{ secrets.GCP_PRIVATE_KEY }}
+        GCP_CLIENT_EMAIL: ${{ secrets.GCP_CLIENT_EMAIL }}
+        GCP_CLIENT_ID: ${{ secrets.GCP_CLIENT_ID }}
+        GCP_CLIENT_X509_CERT_URL: ${{ secrets.GCP_CLIENT_X509_CERT_URL }}
+        CAROM_FARGO_SPREADSHEET_ID: ${{ vars.CAROM_FARGO_SPREADSHEET_ID }}
+      run: |
+        uv run python src/CaromFargoRanking/sheet_to_json.py
+
+    - name: Debug exported files
+      run: ls -la src/CaromFargoRanking/data
+
+    - name: Check for changes
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+        git diff --quiet || echo "CHANGES_DETECTED=true" >> $GITHUB_ENV
+
+    - name: 差分を push
+      run: |-
+        git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
+        git config --global user.name "${GITHUB_ACTOR}"
+        git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+        if (git diff --shortstat | grep '[0-9]'); then \
+          git add .; \
+          git commit -m "GitHub Actions から差分を Push"; \
+          git push origin HEAD:${GITHUB_REF}; \
+        fi
+
+  call-workflow:
+    needs: [update-rating-data]
+    uses: ./.github/workflows/deploy_pages.yml
