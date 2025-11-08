@@ -34,11 +34,8 @@ jobs:
         GCP_CLIENT_EMAIL: ${{ secrets.GCP_CLIENT_EMAIL }}
         GCP_CLIENT_ID: ${{ secrets.GCP_CLIENT_ID }}
         GCP_CLIENT_X509_CERT_URL: ${{ secrets.GCP_CLIENT_X509_CERT_URL }}
-<<<<<<< HEAD
         CAROM_FARGO_SPREADSHEET_ID: ${{ vars.CAROM_FARGO_SPREADSHEET_ID }}
-=======
         MNBK_SPREADSHEET_ID: ${{ vars.CAROM_FARGO_SPREADSHEET_ID }}
->>>>>>> 0e75a3f6338687a90653f6b61dd34f9d711842cd
       run: |
         uv run python src/CaromFargoRanking/sheet_to_json.py
 
@@ -53,11 +50,7 @@ jobs:
         git diff --quiet || echo "CHANGES_DETECTED=true" >> $GITHUB_ENV
 
     - name: 差分を push
-<<<<<<< HEAD
-      run: |-
-=======
       run: |
->>>>>>> 0e75a3f6338687a90653f6b61dd34f9d711842cd
         git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
         git config --global user.name "${GITHUB_ACTOR}"
         git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
@@ -69,8 +62,4 @@ jobs:
 
   call-workflow:
     needs: [update-rating-data]
-<<<<<<< HEAD
     uses: ./.github/workflows/deploy_pages.yml
-=======
-    uses: ./.github/workflows/static.yml
->>>>>>> 0e75a3f6338687a90653f6b61dd34f9d711842cd
