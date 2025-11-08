@@ -37,7 +37,8 @@ jobs:
         CAROM_FARGO_SPREADSHEET_ID: ${{ vars.CAROM_FARGO_SPREADSHEET_ID }}
         MNBK_SPREADSHEET_ID: ${{ vars.CAROM_FARGO_SPREADSHEET_ID }}
       run: |
-        uv run python src/CaromFargoRanking/sheet_to_json.py
+#        uv run python src/CaromFargoRanking/sheet_to_json.py
+        uv run python src/CaromFargoRanking/sheet_to_csv.py
 
     - name: Debug exported files
       run: ls -la src/CaromFargoRanking/data

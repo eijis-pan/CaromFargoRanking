@@ -1,1 +1,200 @@
-[]
+[
+    {
+        "player": "int mint",
+        "rating": "629",
+        "ranking": "8",
+        "lastSeen": "2025/11/06",
+        "skillLevel": "5",
+        "startTarget": "8",
+        "currentTarget": "8",
+        "thisWeekLevel": "5",
+        "compareResult": "登録一致"
+    },
+    {
+        "player": "Ruba d6d4",
+        "rating": "593",
+        "ranking": "12",
+        "lastSeen": "2025/11/08",
+        "skillLevel": "5",
+        "startTarget": "8",
+        "currentTarget": "8",
+        "thisWeekLevel": "5",
+        "compareResult": "登録一致"
+    },
+    {
+        "player": "pen",
+        "rating": "555",
+        "ranking": "1",
+        "lastSeen": "2025/10/28",
+        "skillLevel": "4",
+        "startTarget": "7",
+        "currentTarget": "7",
+        "thisWeekLevel": "4",
+        "compareResult": "登録一致"
+    },
+    {
+        "player": "edamame3tubu",
+        "rating": "552",
+        "ranking": "6",
+        "lastSeen": "2025/11/03",
+        "skillLevel": "4",
+        "startTarget": "7",
+        "currentTarget": "7",
+        "thisWeekLevel": "4",
+        "compareResult": "登録一致"
+    },
+    {
+        "player": "つかぽん",
+        "rating": "537",
+        "ranking": "11",
+        "lastSeen": "2025/11/03",
+        "skillLevel": "4",
+        "startTarget": "7",
+        "currentTarget": "7",
+        "thisWeekLevel": "4",
+        "compareResult": "登録一致"
+    },
+    {
+        "player": "Crout0n",
+        "rating": "535",
+        "ranking": "5",
+        "lastSeen": "2025/11/03",
+        "skillLevel": "3",
+        "startTarget": "6",
+        "currentTarget": "6",
+        "thisWeekLevel": "3",
+        "compareResult": "登録一致"
+    },
+    {
+        "player": "eijis",
+        "rating": "514",
+        "ranking": "7",
+        "lastSeen": "2025/11/06",
+        "skillLevel": "3",
+        "startTarget": "6",
+        "currentTarget": "6",
+        "thisWeekLevel": "3",
+        "compareResult": "登録一致"
+    },
+    {
+        "player": "kuu00",
+        "rating": "502",
+        "ranking": "5",
+        "lastSeen": "2025/11/03",
+        "skillLevel": "3",
+        "startTarget": "6",
+        "currentTarget": "6",
+        "thisWeekLevel": "3",
+        "compareResult": "登録一致"
+    },
+    {
+        "player": "しまこん",
+        "rating": "500",
+        "ranking": "0",
+        "lastSeen": "",
+        "skillLevel": "3",
+        "startTarget": "6",
+        "currentTarget": "6",
+        "thisWeekLevel": "3",
+        "compareResult": "登録一致"
+    },
+    {
+        "player": "Don Matty",
+        "rating": "445",
+        "ranking": "3",
+        "lastSeen": "2025/10/31",
+        "skillLevel": "2",
+        "startTarget": "5",
+        "currentTarget": "5",
+        "thisWeekLevel": "2",
+        "compareResult": "登録一致"
+    },
+    {
+        "player": "shishamoon",
+        "rating": "437",
+        "ranking": "1",
+        "lastSeen": "2025/11/06",
+        "skillLevel": "2",
+        "startTarget": "5",
+        "currentTarget": "5",
+        "thisWeekLevel": "0",
+        "compareResult": "登録一致"
+    },
+    {
+        "player": "keitti",
+        "rating": "429",
+        "ranking": "5",
+        "lastSeen": "2025/10/30",
+        "skillLevel": "2",
+        "startTarget": "5",
+        "currentTarget": "5",
+        "thisWeekLevel": "2",
+        "compareResult": "登録一致"
+    },
+    {
+        "player": "あらたつ",
+        "rating": "428",
+        "ranking": "7",
+        "lastSeen": "2025/11/08",
+        "skillLevel": "2",
+        "startTarget": "5",
+        "currentTarget": "5",
+        "thisWeekLevel": "2",
+        "compareResult": "登録一致"
+    },
+    {
+        "player": "音痴 onti",
+        "rating": "416",
+        "ranking": "1",
+        "lastSeen": "2025/11/06",
+        "skillLevel": "2",
+        "startTarget": "5",
+        "currentTarget": "5",
+        "thisWeekLevel": "0",
+        "compareResult": "登録一致"
+    },
+    {
+        "player": "しそ",
+        "rating": "413",
+        "ranking": "1",
+        "lastSeen": "2025/11/04",
+        "skillLevel": "2",
+        "startTarget": "5",
+        "currentTarget": "5",
+        "thisWeekLevel": "0",
+        "compareResult": "登録一致"
+    },
+    {
+        "player": "gogokichi",
+        "rating": "393",
+        "ranking": "2",
+        "lastSeen": "2025/10/25",
+        "skillLevel": "2",
+        "startTarget": "5",
+        "currentTarget": "5",
+        "thisWeekLevel": "2",
+        "compareResult": "登録一致"
+    },
+    {
+        "player": "トリプルセブン",
+        "rating": "392",
+        "ranking": "4",
+        "lastSeen": "2025/11/04",
+        "skillLevel": "2",
+        "startTarget": "5",
+        "currentTarget": "5",
+        "thisWeekLevel": "2",
+        "compareResult": "登録一致"
+    },
+    {
+        "player": "takotyann",
+        "rating": "374",
+        "ranking": "3",
+        "lastSeen": "2025/10/25",
+        "skillLevel": "1",
+        "startTarget": "4",
+        "currentTarget": "4",
+        "thisWeekLevel": "1",
+        "compareResult": "登録一致"
+    }
+]

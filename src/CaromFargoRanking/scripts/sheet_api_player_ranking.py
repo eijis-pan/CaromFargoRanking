@@ -71,3 +71,21 @@ def get_rating_list(spread_sheet: Spreadsheet) -> list:
     end = time.time()
     logger.debug(end - start)
     return rating_list
+
+def get_ranking_list(spread_sheet: Spreadsheet) -> list:
+    header = ["Player","Rating","CurrentTarget"]
+
+    rows = []
+    rows.append(header)
+
+    ratings = get_rating_list(spread_sheet)
+    for player_info in ratings:
+        row = [
+            player_info["player"],
+            player_info["rating"],
+            player_info["currentTarget"]
+        ]
+        rows.append(row)
+
+    return rows
+
