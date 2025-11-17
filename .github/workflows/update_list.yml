@@ -3,7 +3,7 @@ name: Update list
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 * * * *' # UTC
+    - cron: '0,30 * * * *' # UTC
 #    - cron: '0,10,20,30,40,50 * * * *' # UTC
 
 jobs:
