@@ -6,7 +6,7 @@ on:
 jobs:
   delete-old-workflow-runs:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 5 # 1000件だと間に合わないかも
     env:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: ${{ github.repository }}
