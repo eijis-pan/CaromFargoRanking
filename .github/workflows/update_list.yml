@@ -3,7 +3,8 @@ name: Update list
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0,30 * * * *' # UTC
+    - cron: '55 18 * * *' # UTC時間（日本時間で午前3時55分）
+#    - cron: '0,30 * * * *' # UTC
 #    - cron: '0,10,20,30,40,50 * * * *' # UTC
 
 jobs:
