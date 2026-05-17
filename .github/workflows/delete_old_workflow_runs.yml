@@ -6,7 +6,7 @@ on:
 jobs:
   delete-old-workflow-runs:
     runs-on: ubuntu-latest
-    timeout-minutes: 1
+    timeout-minutes: 3
     env:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: ${{ github.repository }}
