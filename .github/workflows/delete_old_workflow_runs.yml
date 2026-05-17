@@ -10,7 +10,7 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: ${{ github.repository }}
-      WORKFLOW: update_list_by.yml
+      WORKFLOW: update_list.yml
 
     steps:
       - run: gh workflow view "${WORKFLOW}"
